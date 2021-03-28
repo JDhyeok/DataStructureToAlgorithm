@@ -42,14 +42,14 @@ SLList::~SLList() {
 }
 
 void SLList::addToHead(int num) {
-	haed = new SSLNode(num, head);
+	head = new SLLNode(num, head);
 	if (tail == nullptr)
 		tail = head;
 }
 
 void SLList::addToTail(int num) {
 	if (tail != nullptr) {
-		tmp = new SLLNode(num);
+		SLLNode* tmp = new SLLNode(num);
 		tail->next = tmp;
 		tmp = tail;
 	}
@@ -67,7 +67,7 @@ int SLList::deleteFromHead() {
 		head = nullptr;
 	}
 	else {
-		SLList* tmp = head;
+		SLLNode* tmp = head;
 		head = head->next;
 		delete tmp;
 	}
@@ -108,7 +108,7 @@ void SLList::deleteNode(int num) {
 			tail->next = nullptr;
 		}
 		else {
-			SLLNode tmp = travel->next;
+			SLLNode* tmp = travel->next;
 			travel->next = travel->next->next;
 			delete tmp;
 		}
