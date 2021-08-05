@@ -62,3 +62,38 @@ int main() {
 
     return 0;
 }
+
+/*** 메모리 효율적인 코드 둘 다 O(N) ***/
+#include<iostream>
+#include<cstring>
+#include<stdio.h>
+
+using namespace std;
+
+int main() {
+
+    cin.tie(NULL);
+    ios::sync_with_stdio(false);
+
+    char exp[51];
+    int num = 0, ans = 0, flag = 1;
+
+    cin >> exp;
+
+    for (int i = 0; i <= strlen(exp); i++) {
+        if ('0' <= exp[i] && exp[i] <= '9') {
+            num = num * 10 + (exp[i] - '0');
+        }
+        else {
+            ans += (num * flag);
+            if (exp[i] == '-')
+                flag = -1;
+
+            num = 0;
+        }
+    }
+
+    cout << ans << "\n";
+
+    return 0;
+}
