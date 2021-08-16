@@ -8,6 +8,8 @@ using namespace std;
 int N, M;
 int table[100][100] = { 0, };
 
+
+// BFS 풀이 O(N^4)
 int check(int, int);
 
 int main() {
@@ -76,3 +78,62 @@ int check(int init, int dest) {
 
 	return 0;
 }
+
+// Floyd-Warshall 풀이 O(N^3)
+/*
+int floyd();
+
+int main() {
+	
+	cin.tie(NULL);
+	ios::sync_with_stdio(false);
+
+	int user1, user2;
+
+	cin >> N >> M;
+	for (int i = 0; i < M; i++) {
+		cin >> user1 >> user2;
+		table[user1 - 1][user2 - 1] = 1;
+		table[user2 - 1][user1 - 1] = 1;
+	}
+
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < N; j++) {
+			if (i == j)
+				continue;
+			if (table[i][j] == 0)
+				table[i][j] = INF;
+		}
+	}
+
+	floyd();
+
+	int MIN = 987654321, ans = 0;
+	for (int i = 0; i < N; i++) {
+		int sum = 0;
+		for (int j = 0; j < N; j++) {
+			sum += table[i][j];
+		}
+		if (sum < MIN) {
+			MIN = sum;
+			ans = i;
+		}
+	}
+	cout << ans + 1 << "\n";
+
+	return 0;
+}
+
+int floyd() {
+	
+	for (int m = 0; m < N; m++) {
+		for (int s = 0; s < N; s++) {
+			for (int e = 0; e < N; e++) {
+				table[s][e] = min(table[s][e], table[s][m] + table[m][e]);
+			}
+		}
+	}
+
+	return 0;
+}
+*/
