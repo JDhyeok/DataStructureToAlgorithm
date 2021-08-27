@@ -42,3 +42,30 @@ public:
         return !s.size();
     }
 };
+
+
+// space complexity: O(N)       time complexity: O(N)
+bool isValidSerialization(const string& preorder)
+{   
+    int capacity = 1; 
+     
+    istringstream in(preorder); 
+     
+    string node; 
+    while (getline(in, node, ','))
+    {
+        capacity -= 1;
+
+        if (capacity < 0)
+        {
+            return false; 
+        }
+
+        if (node != "#")
+        {   
+            capacity += 2;
+        }
+    }
+    
+    return capacity == 0; 
+}    
