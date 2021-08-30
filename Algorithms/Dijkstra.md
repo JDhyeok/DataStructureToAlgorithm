@@ -38,7 +38,7 @@ void dijkstra(int K, vector<int>& distance) {
         // (인접리스트)
         // (현재 거리(curCost) + 다음 노드로 이동할 때 거리)와 distance[다음노드]를 비교해 distance[다음노드]가 길면 distance[다음노드]를 최신화 하기 위해 pq에 다음노드와 다음노드로 갔을 때 거리를 최신화 한 상태로 pq에 삽입한다.
 		for (int i = 0; i < vec[cur].size(); i++) {
-			if (distance[vec[cur][i].second] < vec[cur][i].first + curCost)
+			if (distance[vec[cur][i].second] <= vec[cur][i].first + curCost)
 				continue;
 
 			distance[vec[cur][i].second] = curCost + vec[cur][i].first;
