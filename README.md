@@ -14,6 +14,11 @@
 |Dijkstra|[link](./Algorithms/Dijkstra.md)|
 |Floyd-Warshall||
 
+## 탐색
+| **알고리즘** | **link** |
+|----------|-----|
+|이분탐색|[link](./Algorithms/BinarySearch.md)
+
 ## Dynamic Programming
 
 
