@@ -1,4 +1,5 @@
 # 다익스트라 알고리즘
+## 개념
 그래프에서 한 vertex 에서 다른 모든 vertex로 가는 최단 거리를 구하는 알고리즘
 
 - 시간 복잡도 : O(E + VlogV)
@@ -8,7 +9,8 @@
 <img src = "./images/dijkstra2.png">
 <img src = "./images/dijkstra3.png">
 
-## Cpp
+## 소스코드
+### Cpp
 ```cpp
 // 노드 개수(V), 에지 개수(E), 시작 지점(K)
 int V, E, K;
