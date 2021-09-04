@@ -12,7 +12,7 @@
 |BFS||
 |DFS||
 |Dijkstra|[link](./Algorithms/Dijkstra.md)|
-|Floyd-Warshall||
+|Floyd-Warshall|[link](./Algorithms/Floyd-Warshall.md)|
 
 ## 탐색
 | **알고리즘** | **link** |
