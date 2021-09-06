@@ -18,10 +18,12 @@
 ## 탐색
 | **알고리즘** | **link** |
 |----------|-----|
-|이분탐색|[link](./Algorithms/BinarySearch.md)
+|이분탐색|[link](./Algorithms/BinarySearch.md)|
 
 ## Dynamic Programming
-
+| **알고리즘** | **link** |
+|----------|-----|
+|LIS|[link](./Algorithms/BinarySearch.md)|
 
 ## Greedy
 
