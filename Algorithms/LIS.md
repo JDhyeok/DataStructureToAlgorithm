@@ -23,8 +23,10 @@ int A[MAX];
 int LIS() {
     int ans = 0;
 
+    dp[0] = 1;
     for(int i = 0 ; i < MAX; i++) {
-        for(int j = 0; j < MAX; j++) {
+        dp[i] = 1;
+        for(int j = 0; j < i; j++) {
             if(A[j] < A[i]) {
                 dp[i] = max(dp[i], dp[j] + 1);
             }
@@ -72,3 +74,24 @@ void LIS() {
     return dp.size();
 }
 ```
+# 관련 문제
+- 백준 11055
+
+    https://www.acmicpc.net/problem/11055
+
+- 백준 1965
+
+    https://www.acmicpc.net/problem/1965
+
+- LeetCode 300
+
+    https://leetcode.com/problems/longest-increasing-subsequence/
+
+
+# Ref
+
+https://namu.wiki/w/%EC%B5%9C%EC%9E%A5%20%EC%A6%9D%EA%B0%80%20%EB%B6%80%EB%B6%84%20%EC%88%98%EC%97%B4#s-3.2
+
+https://godls036.tistory.com/10
+
+https://mygumi.tistory.com/69
