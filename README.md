@@ -26,6 +26,9 @@
 |LIS|[link](./Algorithms/LIS.md)|
 
 ## Greedy
+| **알고리즘** | **link** |
+|----------|-----|
+|회의실 배정|[link](./Algorithms/Meeting_Room.md)|
 
 ## 
 
