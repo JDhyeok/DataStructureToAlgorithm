@@ -95,6 +95,15 @@ $$T_{init} \subset MST \quad AND \quad (T \cup (u,v)) \nsubseteq MST$$
 즉, (u,v)를 추가해도 MST를 만족한다. 해당 **가정이 모순이다**를 증명이 됐다.
 
 
+# 관련 문제
+- 백준 1922
+
+    https://www.acmicpc.net/problem/1922
+
+- 백준 1647
+
+    https://www.acmicpc.net/problem/1647
+
 
 # Ref
 https://www.weeklyps.com/entry/%ED%81%AC%EB%A3%A8%EC%8A%A4%EC%B9%BC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Kruskals-algorithm
