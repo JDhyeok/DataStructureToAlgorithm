@@ -51,5 +51,8 @@ void dijkstra(int K, vector<int>& distance) {
 }
 ```
 
+### 비교
+간선이 많은 그래프(Dense Graph:밀집 그래프)의 최단경로를 찾을 때는 시간 복잡도가 O(E + VlogV)인 Dijkstra 알고리즘이 O(V^3)의 Floyd-Warshall 알고리즘보다 느릴 수 있다.
+
 ## Ref.
 https://mattlee.tistory.com/50
