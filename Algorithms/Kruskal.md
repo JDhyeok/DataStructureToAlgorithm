@@ -74,7 +74,7 @@ int kruskal(){
 
 이제 크루스칼의 시작 시점의 T를 T-init이라 하고 끝났을 시점의 T를 T-last라고 하면 다음과 같은 명제는 참이다.
 
-$$T_{init} \subset MST \quad AND \quad (T_{last}) \nsubseteq MST$$
+$$ T_{init} \subset MST \quad AND \quad (T_{last}) \nsubseteq MST $$
 
 T-init은 공집합이기 때문에 MST의 부분집합이 될 수 있었지만, T-last는 MST가 아닌 그냥 스패닝 트리이기 때문에 MST의 부분 그래프가 아니다.
 
@@ -84,7 +84,7 @@ T-init은 공집합이기 때문에 MST의 부분집합이 될 수 있었지만,
 
 정리하면, 크루스칼 진행과정에 T에 추가되는 간선 중에 MST를 불가능하게 하는 간선 (u,v)가 존재한다. 식으로
 
-$$T_{init} \subset MST \quad AND \quad (T \cup (u,v)) \nsubseteq MST$$
+$$ T_{init} \subset MST \quad AND \quad (T \cup (u,v)) \nsubseteq MST $$
 
 이제 (u,v)를 선택하기 직전 부분 그래프로 가지는 MST 중 하나를 생각해 본다. 이 MST에서는 (u,v)가 직접 연결되어 있지 않고 간접적으로 연결되어 있다.
 
