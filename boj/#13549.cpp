@@ -12,6 +12,7 @@ using namespace std;
 int N, K;
 int dp[MAX];
 
+// dp 풀이 0ms
 int main() {
 
 	ios::sync_with_stdio(false);
@@ -41,5 +42,56 @@ int main() {
 
 	cout << dp[K] << "\n";
 
+	return 0;
+}
+
+
+// bfs 풀이 4ms
+int N, K;
+bool visited[MAX];
+
+int bfs(int N, int K) {
+	
+	priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+
+	visited[N] = true;
+	pq.push({ 0,N });
+
+	while (!pq.empty()) {
+		int cur = pq.top().second;
+		int time = pq.top().first;
+		pq.pop();
+
+		if (cur == K)
+			return time;
+
+		if (cur * 2 < MAX && !visited[cur * 2]) {
+			pq.push({ time, cur * 2 });
+			visited[cur * 2] = true;
+		}
+		if (cur + 1 < MAX && !visited[cur + 1]) {
+			pq.push({ time + 1, cur + 1 });
+			visited[cur + 1] = true;
+		}
+		if (cur - 1 >= 0 && !visited[cur - 1]) {
+			pq.push({ time + 1, cur - 1 });
+			visited[cur - 1] = true;
+		}
+	}
+}
+
+int main() {
+
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+
+
+	fill_n(visited, MAX, false);
+
+	cin >> N >> K;
+	
+	cout << bfs(N, K) << "\n";
+	
 	return 0;
 }
