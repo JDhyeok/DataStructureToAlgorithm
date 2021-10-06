@@ -41,3 +41,8 @@
 | **알고리즘** | **link** |
 |----------|-----|
 |외판원 순회(+DP)|[link](./Algorithms/Bit_Mask.md)|
+
+## Math
+| **알고리즘** | **link** |
+|----------|-----|
+|벡터(CCW)|[link](./Algorithms/CCW.md)|
