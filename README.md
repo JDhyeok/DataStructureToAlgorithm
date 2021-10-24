@@ -24,6 +24,7 @@
 ## Dynamic Programming
 | **알고리즘** | **link** |
 |----------|-----|
+|Knap-sack Problem|[link](./Knapsack.md)|
 |LIS|[link](./Algorithms/LIS.md)|
 |Levenshtein Distance|[link](./Algorithms/Levenshtein_Distance.md)|
 
