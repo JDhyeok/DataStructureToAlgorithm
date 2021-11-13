@@ -15,6 +15,7 @@
 |Floyd-Warshall|[link](./Algorithms/Floyd-Warshall.md)|
 |Union Find|[link](./Algorithms/Union_Find.md)|
 |Bellman Ford|[link](./Algorithms/Bellman_Ford.md)|
+|Kruskal|[link](./Algorithms/Kruskal.md)|
 
 ## 탐색
 | **알고리즘** | **link** |
