@@ -9,7 +9,7 @@
 
 - 점화식
     
-    dist[S][E]가 S에서 E로 가는 최단거리라고 할 때 초기 INF로 놓고 dist[S][E] = min(dist[S][E], dist[S][M], dist[M][E])를 수행해주면 최단거리를 보장할 수 있다.
+    dist[S][E]가 S에서 E로 가는 최단거리라고 할 때 초기 INF로 놓고 dist[S][E] = min(dist[S][E], dist[S][M] + dist[M][E])를 수행해주면 최단거리를 보장할 수 있다.
 
 <img src = "./images/floyd.png">
 
