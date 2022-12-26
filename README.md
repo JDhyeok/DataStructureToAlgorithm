@@ -9,8 +9,6 @@
 ## 그래프 & 트리
 | **알고리즘** | **link** |
 |----------|-----|
-|BFS||
-|DFS||
 |Dijkstra|[link](./Algorithms/Dijkstra.md)|
 |Floyd-Warshall|[link](./Algorithms/Floyd-Warshall.md)|
 |Union Find|[link](./Algorithms/Union_Find.md)|
