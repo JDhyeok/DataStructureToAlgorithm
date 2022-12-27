@@ -51,6 +51,41 @@ void dijkstra(int K, vector<int>& distance) {
 }
 ```
 
+### Python
+```python
+import heapq
+
+INF = int(1e9)
+
+# 노드 개수(V), 엣지 개수(E), 시작 지점(K)
+# Cpp과 같은 알고리즘으로 작성
+
+def dijkstra():
+
+    distance = [INF] * (V + 1)
+    distance[K] = 0
+
+    q = []
+    heapq.heappush(q, [0, K])
+
+    while len(q) != 0:
+        cur_cost, cur_vertex = heapq.heappop(q)
+
+		# 문제풀이 시 해당 line이 없다면 최적화가 덜 되어 시간초과가 날 수 있다.
+        if distance[cur_vertex] < cur_cost:
+            continue
+
+        for cand in adj_list[cur_vertex]:
+            next_cost, next_vertex = cur_cost + cand[0], cand[1]
+            
+            if distance[next_vertex] < next_cost:
+                continue
+
+            distance[next_vertex] = next_cost
+            heapq.heappush(q, [next_cost, next_vertex])
+
+```
+
 ### 비교
 간선이 많은 그래프(Dense Graph:밀집 그래프)의 최단경로를 찾을 때는 시간 복잡도가 O(E + VlogV)인 Dijkstra 알고리즘이 O(V^3)의 Floyd-Warshall 알고리즘보다 느릴 수 있다.
 
